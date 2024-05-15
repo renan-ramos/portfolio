@@ -1,0 +1,50 @@
+{
+  "home": {
+    "hello": "prazer, Renan 👋",
+    "description": "Seja bem-vindo ao meu site pessoal. Sou engenheiro de software, atuando na maior parte do tempo com desenvolvimento web. Ainda não tem muita coisa por aqui 😅, mas eu estou trabalhando nisso...",
+    "skills": {
+      "description": "Aqui estão algumas das tecnologias que eu venho utilizando, seja no meu trabalho ou em projetos pessoais.",
+      "list": [
+        "typescript",
+        "react",
+        "next.js",
+        "go lang",
+        "docker",
+        "git"
+      ]
+    }
+  },
+  "work": {
+    "title": "meu trabalho",
+    "description": "Um resumo sobre a minha experiência profissional.",
+    "experiences": [
+      {
+        "name": "Ingresso.com",
+        "role": "Senior Software Engineer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+      },
+      {
+        "name": "Fundação Getulio Vargas",
+        "role": "Software Engineer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+      },
+      {
+        "name": "Sinapse tecnologias educacionais",
+        "role": "Software Engineer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+      }
+    ]
+  },
+  "blog": {
+    "description": "Aqui você pode encontrar alguns posts sobre a minha jornada como engenheiro de software. Espero que goste."
+  },
+  "application": {
+    "language": {
+      "select": {
+        "label": "Mudar idioma",
+        "en": "🇺🇸 Inglês",
+        "br": "🇧🇷 Português"
+      }
+    }
+  }
+}

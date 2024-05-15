@@ -1,0 +1,50 @@
+{
+  "home": {
+    "hello": "hi, I'm Renan 👋",
+    "description": "Wellcome to my portfolio. I'm a software engineer, working mostly of my time with front-end development. Right now there isn't a lot to see here 😅, but I'm working on it...",
+    "skills": {
+      "description": "Here are some of the technologies I've been using at my work or in my personal projects.",
+      "list":  [
+        "typescript",
+        "react",
+        "next.js",
+        "go lang",
+        "docker",
+        "git"
+      ]
+    }
+  },
+  "work": {
+    "title": "my work",
+    "description": "Here's a summary of my work experience so far.",
+    "experiences": [
+      {
+        "name": "Ingresso.com",
+        "role": "Senior Software Engineer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+      },
+      {
+        "name": "Fundação Getulio Vargas",
+        "role": "Software Engineer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+      },
+      {
+        "name": "Sinapse tecnologias educacionais",
+        "role": "Software Engineer",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+      }
+    ]
+  },
+  "blog": {
+    "description": "Here you'll find some posts about my journey as a software engineer. I hope you enjoy it."
+  },
+  "application": {
+    "language": {
+      "select": {
+        "label": "Select language",
+        "en": "🇺🇸 English",
+        "br": "🇧🇷 Portuguese"
+      }
+    }
+  }
+}
