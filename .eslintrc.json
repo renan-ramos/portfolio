@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["prettier"],
+  "extends": ["next", "prettier"],
+  "rules": {
+    "no-unused-vars": "error",
+    "react/no-unescaped-entities": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
