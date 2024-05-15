@@ -19,7 +19,7 @@ const Home = () => {
       <h2 className="mb-8 text-xl font-medium tracking-tighter">Skills</h2>
       <p>{t('skills.description')}</p>
 
-      <ul className="my-4 flex flex-col gap-2 text-neutral-600 dark:text-neutral-300 md:flex-row">
+      <ul className="my-4 flex flex-wrap gap-2 text-neutral-600 dark:text-neutral-300 md:flex-row">
         {skills.map((skill: string) => (
           <li
             key={skill}
