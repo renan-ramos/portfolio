@@ -26,12 +26,18 @@
       {
         "name": "Fundação Getulio Vargas",
         "role": "Software Engineer",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+        "description": "A Fundação Getulio Vargas é uma das mais importantes instituições de ensino e pesquisa do Brasil, onde eu tive a oportunidade de trabalhar na Diretoria de Análise de Políticas Públicas (FGV DAPP).",
+        "list": [
+          "Desenvolvimento do webapp 'observa2018' para o acompanhamento das eleições presidenciais do Brasil de 2018 nas redes sociais. O projeto foi um sucesso e foi destaque em vários veículos de comunicação. O projeto foi desenvolvido com vue.js e Node.js e contava com recursos de PWA e Push Notification, permitindo o acompanhamento em tempo real das menções dos candidatos nas redes sociais.",
+          "Desenvolvimento de dashboards focados na análise de dados voltados para políticas públicas, utilizando javascript, d3.js.",
+          "Reformulação do site institucional da diretoria, feito com wordpress e PHP.",
+          "Implementação do design system da diretoria, além de diversos projetos internos."
+        ]
       },
       {
         "name": "Sinapse tecnologias educacionais",
         "role": "Software Engineer",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+        "description": "Sinapse é uma empresa que atua há mais de 30 anos no mercado de tecnologia educacional. Lá eu tive a oportunidade de trabalhar na implementação de sites para instituições de ensino."
       }
     ]
   },

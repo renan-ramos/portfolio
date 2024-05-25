@@ -26,7 +26,15 @@ const Work = () => {
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               {experience?.role}
             </p>
-            <p>{experience?.description}</p>
+            <p className="py-4">{experience?.description}</p>
+
+            <ul className="flex flex-col gap-4">
+              {experience?.list?.map((item) => (
+                <li key={item} className="ml-8 list-disc">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
