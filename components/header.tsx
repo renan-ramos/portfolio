@@ -18,9 +18,9 @@ const TwitterIcon = () => {
   return (
     <svg
       className="h-3 w-3 fill-current"
+      width="23"
       height="23"
       viewBox="0 0 1200 1227"
-      width="23"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path>
@@ -39,8 +39,8 @@ type HeaderProps = ComponentProps<'header'>
 const Header = (props: HeaderProps) => {
   return (
     <header {...props} className={cn('container', props.className)}>
-      <nav className="flex items-center justify-between gap-4">
-        <ul className="my-4 flex flex-1 flex-row gap-2 text-neutral-600 dark:text-neutral-300">
+      <nav className="flex items-center justify-between gap-4 py-10">
+        <ul className="flex flex-1 flex-row gap-2 text-neutral-600 dark:text-neutral-200">
           {Object.entries(menuItems).map(([path, { text }]) => (
             <li key={path}>
               <Link
@@ -52,21 +52,20 @@ const Header = (props: HeaderProps) => {
             </li>
           ))}
         </ul>
-
         <LanguageSelect />
-
         <a
           href="https://github.com/renan-ramos"
           target="_blank"
           rel="noreferrer noopener"
+          className="hidden sm:block"
         >
           <GithubIcon />
         </a>
-
         <a
           href="https://twitter.com/RenanGarcia_dev"
           target="_blank"
           rel="noreferrer noopener"
+          className="hidden sm:block"
         >
           <TwitterIcon />
         </a>

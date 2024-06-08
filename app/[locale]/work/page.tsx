@@ -6,7 +6,7 @@ const Work = () => {
   const experiences = messages?.work?.experiences
 
   return (
-    <main className="container">
+    <main className="container grow">
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
         {t('title')}
       </h1>
@@ -29,8 +29,11 @@ const Work = () => {
             <p className="py-4">{experience?.description}</p>
 
             <ul className="flex flex-col gap-4">
-              {experience?.list?.map((item) => (
-                <li key={item} className="ml-8 list-disc">
+              {experience?.list?.map((item: string) => (
+                <li
+                  key={item}
+                  className="list ml-8 list-disc marker:text-neutral-600"
+                >
                   {item}
                 </li>
               ))}

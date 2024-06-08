@@ -5,12 +5,15 @@
     "skills": {
       "description": "Aqui estão algumas das tecnologias que eu venho utilizando, seja no meu trabalho ou em projetos pessoais.",
       "list": [
-        "typescript",
-        "react",
-        "next.js",
-        "go lang",
-        "docker",
-        "git"
+        "Typescript",
+        "React",
+        "Next.js",
+        "Go lang",
+        "Docker",
+        "Git",
+        "TanStack/Query",
+        "Jest",
+        "Storybook"
       ]
     }
   },
@@ -21,14 +24,19 @@
       {
         "name": "Ingresso.com",
         "role": "Senior Software Engineer",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+        "description": "A Ingresso.com é uma plataforma pioneira na venda de ingressos do Brasil, oferecendo uma ampla gama de ingressos para eventos, cinemas e shows. Desde 2020, atuo como a referência técnica para desenvolvedores front-end, liderando a implementação de novas funcionalidades, garantindo a manutenção e otimização da performance do site, e promovendo a adoção das melhores práticas em desenvolvimento web. Minha atuação inclui a coordenação técnica de projetos de alta complexidade, a mentoria de novos talentos e a colaboração estreita com equipes de UX/UI para assegurar a melhor experiência de usuário possível.",
+        "list": [
+          "Implementação de um novo fluxo de compra de ingressos para o Rock in Rio 2022, migrando o projeto legado feito em angular.js para um stack mais atual utilizando React, Next.js, Typescript e react-hook-form",
+          "Desenvolvimento do product discovery da empresa, feito com React, Next.js, Typescript, React-Query, Storybook, zod e react-hook-form",
+          "Realização de testes automatizados com Jest e Playwright, monitoria de erro com Sentry, garantia de qualidade com SonarQube e implementação de CI/CD com Github Actions"
+        ]
       },
       {
         "name": "Fundação Getulio Vargas",
         "role": "Software Engineer",
         "description": "A Fundação Getulio Vargas é uma das mais importantes instituições de ensino e pesquisa do Brasil, onde eu tive a oportunidade de trabalhar na Diretoria de Análise de Políticas Públicas (FGV DAPP).",
         "list": [
-          "Desenvolvimento do webapp 'observa2018' para o acompanhamento das eleições presidenciais do Brasil de 2018 nas redes sociais. O projeto foi um sucesso e foi destaque em vários veículos de comunicação. O projeto foi desenvolvido com vue.js e Node.js e contava com recursos de PWA e Push Notification, permitindo o acompanhamento em tempo real das menções dos candidatos nas redes sociais.",
+          "Desenvolvimento do webapp 'observa2018' para o acompanhamento das eleições presidenciais do Brasil de 2018 nas redes sociais. O projeto foi um sucesso e foi destaque em vários veículos de comunicação. O projeto foi desenvolvido com vue.js e Express e contava com recursos de PWA e Push Notification, permitindo o acompanhamento em tempo real das menções dos candidatos nas redes sociais.",
           "Desenvolvimento de dashboards focados na análise de dados voltados para políticas públicas, utilizando javascript, d3.js.",
           "Reformulação do site institucional da diretoria, feito com wordpress e PHP.",
           "Implementação do design system da diretoria, além de diversos projetos internos."

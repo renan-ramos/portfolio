@@ -17,8 +17,8 @@ const ArrowIcon = () => {
 
 const Footer = () => {
   return (
-    <footer className="container mt-auto">
-      <ul className="flex flex-col gap-2 text-neutral-600 dark:text-neutral-300 md:flex-row">
+    <footer className="container py-3">
+      <ul className="flex flex-col gap-2 text-neutral-600 md:flex-row dark:text-neutral-300">
         <li>
           <a
             href="https://twitter.com/RenanGarcia_dev"

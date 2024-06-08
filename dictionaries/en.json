@@ -5,12 +5,15 @@
     "skills": {
       "description": "Here are some of the technologies I've been using at my work or in my personal projects.",
       "list":  [
-        "typescript",
-        "react",
-        "next.js",
-        "go lang",
-        "docker",
-        "git"
+        "Typescript",
+        "React",
+        "Next.js",
+        "Go lang",
+        "Docker",
+        "Git",
+        "TanStack/Query",
+        "Jest",
+        "Storybook"
       ]
     }
   },
@@ -21,14 +24,19 @@
       {
         "name": "Ingresso.com",
         "role": "Senior Software Engineer",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi minima, velit cupiditate dicta sed suscipit. Praesentium sequi nemo quia, quasi, ipsum error rem quaerat sapiente sunt sint, officiis vel."
+        "description": "Ingresso.com is a pioneering ticket sales platform in Brazil, offering a wide range of tickets for events, cinemas and shows. Since 2020, I have acted as a technical reference for front-end developers, leading the implementation of new features, ensuring the maintenance and optimization of website performance, and promoting the adoption of best practices in web development. My role includes technical coordination of highly complex projects, mentoring new talent and working closely with UX/UI teams to ensure the best possible user experience.",
+        "list": [
+          "Implementation of a new ticket purchase flow for Rock in Rio 2022, migrating the legacy project made in angular.js to a more current stack using React, Next.js, Typescript and react-hook-form",
+          "Development of the company's product discovery, made with React, Next.js, Typescript, React-Query, Storybook, zod and react-hook-form",
+          "Carrying out automated tests with Jest and Playwright, error monitoring with Sentry, quality assurance with SonarQube and CI/CD implementation with Github Actions"
+        ]
       },
       {
         "name": "Fundação Getulio Vargas",
         "role": "Software Engineer",
         "description": "The Fundação Getulio Vargas is one of the most important educational and research institutions in Brazil, where I had the opportunity to work in the Diretoria de Análise de Políticas Públicas (FGV DAPP).",
         "list": [
-          "Development of the 'observa2018' webapp for monitoring the 2018 Brazilian presidential elections reactions on social media. The project was a success and was highlighted by the press. Developed with vue.js and Node.js, the app had PWA and Push Notification features which allowed real-time view of mentions of the candidates on social media.",
+          "Development of the 'observa2018' webapp for monitoring the 2018 Brazilian presidential elections reactions on social media. The project was a success and was highlighted by the press. Developed with vue.js and Express, the app had PWA and Push Notification features which allowed real-time view of mentions of the candidates on social media.",
           "Development of dashboards focused on data analysis aimed at public policies, using javascript, d3.js.",
           "Redesign of the board's institutional website, made with wordpress and PHP.",
           "Implementation of the board's design system, in addition to several internal projects."
