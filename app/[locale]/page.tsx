@@ -6,7 +6,7 @@ const Home = () => {
   const skills = messages?.home?.skills?.list
 
   return (
-    <main className="container">
+    <main className="container grow">
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
         {t('hello')}
       </h1>
