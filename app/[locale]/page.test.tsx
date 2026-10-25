@@ -66,7 +66,7 @@ describe('Page translations', () => {
     'generates $locale metadata from the dictionary',
     async ({ locale, messages }) => {
       vi.mocked(getTranslations).mockResolvedValue(
-        createTranslator({
+        createTranslator<Record<string, Record<string, string>>, string>({
           locale,
           messages: { metadata: messages.metadata },
           namespace: 'metadata'
@@ -74,9 +74,9 @@ describe('Page translations', () => {
       )
 
       expect(locales).toContain(locale)
-      expect(await generateMetadata({ params: { locale } })).toEqual(
-        messages.metadata
-      )
+      expect(
+        await generateMetadata({ params: Promise.resolve({ locale }) })
+      ).toEqual(messages.metadata)
       expect(getTranslations).toHaveBeenLastCalledWith({
         locale,
         namespace: 'metadata'
