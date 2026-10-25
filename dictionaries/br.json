@@ -1,8 +1,13 @@
 {
+  "metadata": {
+    "title": "Renan Garcia",
+    "description": "Site pessoal de Renan Garcia"
+  },
   "home": {
     "hello": "prazer, Renan 👋",
     "description": "Seja bem-vindo ao meu site pessoal. Sou engenheiro de software, atuando na maior parte do tempo com desenvolvimento web. Ainda não tem muita coisa por aqui 😅, mas eu estou trabalhando nisso...",
     "skills": {
+      "title": "Habilidades",
       "description": "Aqui estão algumas das tecnologias que eu venho utilizando, seja no meu trabalho ou em projetos pessoais.",
       "list": [
         "Typescript",
@@ -50,9 +55,19 @@
     ]
   },
   "blog": {
+    "title": "Blog",
     "description": "Aqui você pode encontrar alguns posts sobre a minha jornada como engenheiro de software. Espero que goste."
   },
   "application": {
+    "navigation": {
+      "home": "início",
+      "work": "trabalho",
+      "blog": "blog"
+    },
+    "footer": {
+      "follow": "me siga",
+      "code": "veja meus códigos"
+    },
     "language": {
       "select": {
         "label": "Mudar idioma",

@@ -16,7 +16,9 @@ const Home = () => {
 
       <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
 
-      <h2 className="mb-8 text-xl font-medium tracking-tighter">Skills</h2>
+      <h2 className="mb-8 text-xl font-medium tracking-tighter">
+        {t('skills.title')}
+      </h2>
       <p>{t('skills.description')}</p>
 
       <ul className="my-4 flex flex-wrap gap-2 text-neutral-600 md:flex-row dark:text-neutral-300">

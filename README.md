@@ -20,6 +20,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Translations
+
+The supported locales are English (`en`) and Brazilian Portuguese (`br`).
+Keep user-facing text, including page metadata, in matching keys in
+[`dictionaries/en.json`](./dictionaries/en.json) and
+[`dictionaries/br.json`](./dictionaries/br.json), and read it with
+`useTranslations` (or `getTranslations` for async server functions).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

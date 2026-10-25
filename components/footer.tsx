@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl'
+
 const ArrowIcon = () => {
   return (
     <svg
@@ -16,6 +18,8 @@ const ArrowIcon = () => {
 }
 
 const Footer = () => {
+  const t = useTranslations('application.footer')
+
   return (
     <footer className="container py-3">
       <ul className="flex flex-col gap-2 text-neutral-600 md:flex-row dark:text-neutral-300">
@@ -26,7 +30,7 @@ const Footer = () => {
             rel="noreferrer noopener"
             className="flex items-center gap-2 transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
           >
-            <ArrowIcon /> <p className="h-7">follow me</p>
+            <ArrowIcon /> <p className="h-7">{t('follow')}</p>
           </a>
         </li>
         <li>
@@ -36,7 +40,7 @@ const Footer = () => {
             rel="noreferrer noopener"
             className="flex items-center gap-2 transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
           >
-            <ArrowIcon /> <p className="h-7">spy some code</p>
+            <ArrowIcon /> <p className="h-7">{t('code')}</p>
           </a>
         </li>
       </ul>

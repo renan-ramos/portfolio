@@ -17,6 +17,10 @@ const LanguageSelect = () => {
   const t = useTranslations('application.language.select')
 
   const handleLanguageChange = (value: string) => {
+    if (value !== 'en' && value !== 'br') {
+      throw new Error(`Unsupported locale: ${value}`)
+    }
+
     router.replace(pathname, { locale: value })
   }
 
