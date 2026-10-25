@@ -1,10 +1,15 @@
 {
+  "metadata": {
+    "title": "Renan Garcia",
+    "description": "Renan Garcia's personal website"
+  },
   "home": {
     "hello": "hi, I'm Renan 👋",
     "description": "Wellcome to my portfolio. I'm a software engineer, working mostly of my time with front-end development. Right now there isn't a lot to see here 😅, but I'm working on it...",
     "skills": {
+      "title": "Skills",
       "description": "Here are some of the technologies I've been using at my work or in my personal projects.",
-      "list":  [
+      "list": [
         "Typescript",
         "React",
         "Next.js",
@@ -50,9 +55,19 @@
     ]
   },
   "blog": {
+    "title": "Blog",
     "description": "Here you'll find some posts about my journey as a software engineer. I hope you enjoy it."
   },
   "application": {
+    "navigation": {
+      "home": "home",
+      "work": "work",
+      "blog": "blog"
+    },
+    "footer": {
+      "follow": "follow me",
+      "code": "spy some code"
+    },
     "language": {
       "select": {
         "label": "Select language",

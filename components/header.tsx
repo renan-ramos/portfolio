@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import { ComponentProps } from 'react'
+import { useTranslations } from 'next-intl'
 import LanguageSelect from './language-select'
 import Link from './navigation-link'
 
@@ -37,6 +38,8 @@ const menuItems = {
 type HeaderProps = ComponentProps<'header'>
 
 const Header = (props: HeaderProps) => {
+  const t = useTranslations('application.navigation')
+
   return (
     <header {...props} className={cn('container', props.className)}>
       <nav className="flex items-center justify-between gap-4 py-10">
@@ -47,7 +50,7 @@ const Header = (props: HeaderProps) => {
                 href={path}
                 className="transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
               >
-                {text}
+                {t(text)}
               </Link>
             </li>
           ))}

@@ -6,17 +6,23 @@ import { cn } from '@/lib/utils'
 import Footer from '@/components/footer'
 import { ComponentProps } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, getTranslations } from 'next-intl/server'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Renan Garcia',
-  description: "Renan Garcia's personal website"
-}
-
 type RootLayoutProps = ComponentProps<'html'> & {
   params: { locale: string }
+}
+
+export const generateMetadata = async ({
+  params: { locale }
+}: RootLayoutProps): Promise<Metadata> => {
+  const t = await getTranslations({ locale, namespace: 'metadata' })
+
+  return {
+    title: t('title'),
+    description: t('description')
+  }
 }
 
 const RootLayout = async ({
@@ -27,7 +33,7 @@ const RootLayout = async ({
 
   return (
     <html lang={locale} className={cn(inter.className)}>
-      <body className="flex min-h-screen flex-col bg-background antialiased">
+      <body className="bg-background flex min-h-screen flex-col antialiased">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
