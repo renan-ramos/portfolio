@@ -18,7 +18,7 @@ const Work = () => {
         {experiences?.map((experience: any, index: number) => (
           <li
             key={experience?.name}
-            className="grid gap-6 border-b py-10 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
+            className="grid gap-6 border-b py-10 last:border-b-0 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
           >
             <div>
               <p className="text-primary font-mono text-xs">
