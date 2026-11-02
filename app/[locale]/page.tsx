@@ -40,7 +40,7 @@ const Home = () => {
 
       <section className="bg-primary text-primary-foreground overflow-hidden py-4 font-mono whitespace-nowrap">
         <h2 className="sr-only">{t('skills.title')}</h2>
-        <ul className="container flex gap-3">
+        <ul className="container flex flex-wrap gap-x-3 gap-y-1">
           {skills.map((skill) => (
             <li
               key={skill}
