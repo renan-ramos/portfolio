@@ -32,16 +32,19 @@
       "list": [
         {
           "company": "Ingresso.com · 2022",
+          "work": 1,
           "title": "Fluxo de compra do Rock in Rio",
           "description": "Reconstrução de um checkout legado em Angular.js com React, Next.js, TypeScript e react-hook-form."
         },
         {
           "company": "FGV DAPP · 2018",
+          "work": 2,
           "title": "observa2018",
           "description": "PWA em tempo real com push notifications acompanhando menções das eleições nas redes sociais. Destaque na imprensa."
         },
         {
           "company": "Ingresso.com",
+          "work": 1,
           "title": "Product discovery",
           "description": "React, Next.js, React Query, Storybook e zod — testado com Jest e Playwright, entregue via GitHub Actions."
         }

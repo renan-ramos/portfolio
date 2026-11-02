@@ -11,7 +11,8 @@ vi.mock('@/i18n/navigation', () => ({
     <a href={href} {...props}>
       {children}
     </a>
-  )
+  ),
+  usePathname: () => '/'
 }))
 
 vi.mock('@/components/menu-shortcuts/menu-shortcuts', () => ({

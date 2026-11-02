@@ -2,7 +2,7 @@ import { useMessages, useTranslations } from 'next-intl'
 import { ContactDrawer } from '@/components/contact-drawer/contact-drawer'
 import { NavigationLink } from '@/components/navigation-link/navigation-link'
 
-type Case = { company: string; title: string; description: string }
+type Case = { company: string; work: number; title: string; description: string }
 
 const Home = () => {
   const t = useTranslations('home')
@@ -44,7 +44,7 @@ const Home = () => {
           {skills.map((skill) => (
             <li
               key={skill}
-              className="hover:text-muted-foreground flex gap-3 uppercase after:content-['|'] last:after:content-none hover:cursor-pointer"
+              className="flex gap-3 uppercase after:content-['|'] last:after:content-none"
             >
               {skill}
             </li>
@@ -65,7 +65,7 @@ const Home = () => {
           {cases.map((item) => (
             <li key={item.title} className="bg-background">
               <NavigationLink
-                href="/work"
+                href={`/work#work-${item.work}`}
                 className="group flex h-full flex-col justify-between gap-5 p-8 transition-colors hover:bg-neutral-900 md:min-h-80"
               >
                 <p className="text-primary font-mono text-xs uppercase">

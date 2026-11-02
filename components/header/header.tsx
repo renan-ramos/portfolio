@@ -1,6 +1,9 @@
+'use client'
+
 import { cn } from '@/lib/utils'
 import { ComponentProps } from 'react'
 import { useTranslations } from 'next-intl'
+import { usePathname } from '@/i18n/navigation'
 import { LanguageSelect } from '@/components/language-select/language-select'
 import { MenuShortcuts } from '@/components/menu-shortcuts/menu-shortcuts'
 import { NavigationLink } from '@/components/navigation-link/navigation-link'
@@ -19,6 +22,7 @@ type HeaderProps = ComponentProps<'header'>
 
 export const Header = ({ className, ...props }: HeaderProps) => {
   const t = useTranslations('application.navigation')
+  const pathname = usePathname()
 
   return (
     <header
@@ -50,7 +54,8 @@ export const Header = ({ className, ...props }: HeaderProps) => {
               <NavigationLink
                 href={path}
                 aria-keyshortcuts={key}
-                className="hover:text-primary transition-colors"
+                aria-current={pathname === path ? 'page' : undefined}
+                className="hover:text-primary aria-[current=page]:text-primary transition-colors"
               >
                 <span aria-hidden="true">[{key.toUpperCase()}] </span>
                 {t(text)}

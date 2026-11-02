@@ -18,6 +18,7 @@ const Work = () => {
         {experiences?.map((experience: any, index: number) => (
           <li
             key={experience?.name}
+            id={`work-${index + 1}`}
             className="grid gap-6 border-b py-10 last:border-b-0 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
           >
             <div className="md:sticky md:top-10 md:self-start">
