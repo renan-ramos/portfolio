@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import { ContactDrawer } from '@/components/contact-drawer/contact-drawer'
 
 export const Footer = () => {
   const t = useTranslations('application.footer')
@@ -8,12 +9,7 @@ export const Footer = () => {
       <p className="text-muted-foreground font-mono text-sm tracking-widest uppercase">
         {t('prompt')}
       </p>
-      <a
-        href="https://twitter.com/RenanGarcia_dev"
-        target="_blank"
-        rel="noreferrer noopener"
-        className="hover:text-primary mt-4 mb-16 block text-[clamp(3rem,10vw,10rem)] leading-[0.9] font-bold tracking-[-0.06em] transition-colors"
-      >
+      <ContactDrawer className="hover:text-primary mt-4 mb-16 block text-left text-[clamp(3rem,10vw,10rem)] leading-[0.9] font-bold tracking-[-0.06em] transition-colors">
         {t('talk')}
         <span
           aria-hidden="true"
@@ -21,7 +17,7 @@ export const Footer = () => {
         >
           →
         </span>
-      </a>
+      </ContactDrawer>
       <div className="flex flex-wrap justify-between gap-4 border-t pt-6 font-mono text-sm">
         <span className="text-muted-foreground">© 2026 Renan Garcia</span>
         <ul className="flex gap-8">

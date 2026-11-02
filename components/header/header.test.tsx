@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { describe, expect, it, vi } from 'vitest'
 import en from '@/dictionaries/en.json'
 import br from '@/dictionaries/br.json'
-import { Header } from '../header/header'
+import { Header } from './header'
 
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: ComponentProps<'a'>) => (
@@ -14,10 +14,12 @@ vi.mock('@/i18n/navigation', () => ({
   )
 }))
 
-vi.mock('./menu-shortcuts', () => ({ default: () => null }))
+vi.mock('@/components/menu-shortcuts/menu-shortcuts', () => ({
+  MenuShortcuts: () => null
+}))
 
-vi.mock('./language-select', () => ({
-  default: () => <div data-testid="language-select" />
+vi.mock('@/components/language-select/language-select', () => ({
+  LanguageSelect: () => <div data-testid="language-select" />
 }))
 
 describe('Header', () => {

@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { describe, expect, it } from 'vitest'
 import en from '@/dictionaries/en.json'
 import br from '@/dictionaries/br.json'
-import Footer from './footer/footer'
+import { Footer } from './footer'
 
 describe('Footer', () => {
   it.each([
@@ -15,7 +15,10 @@ describe('Footer', () => {
       render(
         <NextIntlClientProvider
           locale={locale}
-          messages={{ application: messages.application }}
+          messages={{
+            application: messages.application,
+            contact: messages.contact
+          }}
         >
           <Footer />
         </NextIntlClientProvider>

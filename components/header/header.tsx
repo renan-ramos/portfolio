@@ -26,14 +26,25 @@ export const Header = (props: HeaderProps) => {
       className={cn('container border-b font-mono text-sm', props.className)}
     >
       <nav className="flex flex-wrap items-center justify-between gap-4 py-5">
-        <NavigationLink href="/" className="hover:text-primary flex items-center gap-2.5">
-          <span
+        <NavigationLink
+          href="/"
+          className="hover:text-primary flex items-center gap-2.5"
+        >
+          <svg
             aria-hidden="true"
-            className="bg-primary size-2.5 rounded-full"
-          />
+            viewBox="0 0 16 16"
+            className="text-primary size-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M5 4 1.5 8 5 12M11 4l3.5 4-3.5 4M9.5 2.5l-3 11" />
+          </svg>
           renan.garcia
         </NavigationLink>
-        <ul className="order-last flex w-full flex-wrap justify-between gap-x-4 gap-y-2 md:order-none md:w-auto md:gap-7">
+        <ul className="order-last flex w-full flex-wrap justify-between gap-x-4 gap-y-2 md:order-0 md:w-auto md:gap-7">
           {Object.entries(menuItems).map(([path, { text, key }]) => (
             <li key={path}>
               <NavigationLink

@@ -84,6 +84,19 @@
     "title": "Blog",
     "description": "Aqui você pode encontrar alguns posts sobre a minha jornada como engenheiro de software. Espero que goste."
   },
+  "contact": {
+    "title": "Fale comigo",
+    "description": "Conte um pouco sobre o seu projeto. Sua mensagem chega direto na minha caixa de entrada.",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "send": "Enviar mensagem",
+    "errors": {
+      "required": "Este campo é obrigatório.",
+      "invalidEmail": "Informe um e-mail válido.",
+      "tooLong": "Este texto é muito longo."
+    }
+  },
   "application": {
     "navigation": {
       "home": "início",
