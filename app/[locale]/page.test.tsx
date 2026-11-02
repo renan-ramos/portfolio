@@ -49,6 +49,7 @@ describe('Page translations', () => {
         locale={locale}
         messages={{
           home: messages.home,
+          contact: messages.contact,
           blog: { ...messages.blog, title: blogTitle }
         }}
       >

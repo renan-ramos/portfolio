@@ -1,4 +1,5 @@
 import { useMessages, useTranslations } from 'next-intl'
+import { ContactDrawer } from '@/components/contact-drawer/contact-drawer'
 import { NavigationLink } from '@/components/navigation-link/navigation-link'
 
 type Case = { company: string; title: string; description: string }
@@ -16,7 +17,7 @@ const Home = () => {
           <p className="text-muted-foreground mb-8 font-mono text-sm">
             {`// ${t('role')}`}
           </p>
-          <h1 className="text-[clamp(3.5rem,9vw,9rem)] leading-[0.88] font-bold tracking-[-0.05em]">
+          <h1 className="text-[clamp(3.5rem,9vw,9rem)] leading-[0.88] font-bold tracking-tighter">
             {t('headline')}{' '}
             <span className="text-primary">{t('headlineAccent')}</span>
           </h1>
@@ -32,14 +33,9 @@ const Home = () => {
             >
               {t('cta.work')} →
             </NavigationLink>
-            <a
-              href="https://twitter.com/RenanGarcia_dev"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="border-foreground hover:border-primary hover:text-primary inline-flex min-h-12 items-center border px-6 font-medium"
-            >
+            <ContactDrawer className="border-foreground hover:border-primary hover:text-primary inline-flex min-h-12 items-center border px-6 font-medium">
               {t('cta.contact')}
-            </a>
+            </ContactDrawer>
           </div>
         </div>
       </section>
@@ -50,7 +46,7 @@ const Home = () => {
           {skills.map((skill) => (
             <li
               key={skill}
-              className="flex gap-3 uppercase after:content-['|'] last:after:content-none hover:text-muted-foreground hover:cursor-pointer"
+              className="hover:text-muted-foreground flex gap-3 uppercase after:content-['|'] last:after:content-none hover:cursor-pointer"
             >
               {skill}
             </li>

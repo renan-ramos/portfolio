@@ -26,13 +26,17 @@ export const LanguageSelect = () => {
 
   return (
     <Select onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-36 px-2 text-xs sm:w-44 sm:px-3 sm:text-sm cursor-pointer">
+      <SelectTrigger className="w-36 cursor-pointer px-2 text-xs sm:w-44 sm:px-3 sm:text-sm">
         <SelectValue placeholder={t('label')} />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="en" className="cursor-pointer">{t('en')}</SelectItem>
-          <SelectItem value="br" className="cursor-pointer">{t('br')}</SelectItem>
+          <SelectItem value="en" className="cursor-pointer">
+            {t('en')}
+          </SelectItem>
+          <SelectItem value="br" className="cursor-pointer">
+            {t('br')}
+          </SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

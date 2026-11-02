@@ -84,6 +84,19 @@
     "title": "Blog",
     "description": "Here you'll find some posts about my journey as a software engineer. I hope you enjoy it."
   },
+  "contact": {
+    "title": "Get in touch",
+    "description": "Tell me about your project. Your message goes straight to my inbox.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "errors": {
+      "required": "This field is required.",
+      "invalidEmail": "Enter a valid email address.",
+      "tooLong": "This text is too long."
+    }
+  },
   "application": {
     "navigation": {
       "home": "home",

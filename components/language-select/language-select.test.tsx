@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import LanguageSelect from './language-select/language-select'
+import { LanguageSelect } from './language-select'
 
 const { replace } = vi.hoisted(() => ({ replace: vi.fn() }))
 
