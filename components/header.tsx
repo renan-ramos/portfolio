@@ -28,7 +28,7 @@ const Header = (props: HeaderProps) => {
           />
           renan.garcia
         </Link>
-        <ul className="flex flex-wrap gap-7">
+        <ul className="order-last flex w-full flex-wrap gap-7 md:order-none md:w-auto">
           {Object.entries(menuItems).map(([path, { text }], index) => (
             <li key={path}>
               <Link
