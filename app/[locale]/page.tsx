@@ -50,7 +50,7 @@ const Home = () => {
           {skills.map((skill) => (
             <li
               key={skill}
-              className="flex gap-3 uppercase after:content-['✳'] last:after:content-none"
+              className="flex gap-3 uppercase after:content-['|'] last:after:content-none hover:text-muted-foreground hover:cursor-pointer"
             >
               {skill}
             </li>
