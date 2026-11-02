@@ -2,13 +2,18 @@ import { cn } from '@/lib/utils'
 import { ComponentProps } from 'react'
 import { useTranslations } from 'next-intl'
 import LanguageSelect from './language-select'
+import MenuShortcuts from './menu-shortcuts'
 import Link from './navigation-link'
 
 const menuItems = {
-  '/': { text: 'home' },
-  '/work': { text: 'work' },
-  '/blog': { text: 'blog' }
+  '/': { text: 'home', key: 'h' },
+  '/work': { text: 'work', key: 'w' },
+  '/blog': { text: 'blog', key: 'b' }
 }
+
+const shortcuts = Object.fromEntries(
+  Object.entries(menuItems).map(([path, { key }]) => [key, path])
+)
 
 type HeaderProps = ComponentProps<'header'>
 
@@ -29,19 +34,21 @@ const Header = (props: HeaderProps) => {
           renan.garcia
         </Link>
         <ul className="order-last flex w-full flex-wrap gap-7 md:order-none md:w-auto">
-          {Object.entries(menuItems).map(([path, { text }], index) => (
+          {Object.entries(menuItems).map(([path, { text, key }]) => (
             <li key={path}>
               <Link
                 href={path}
+                aria-keyshortcuts={key}
                 className="hover:text-primary transition-colors"
               >
-                <span aria-hidden="true">[0{index + 1}] </span>
+                <span aria-hidden="true">[{key.toUpperCase()}] </span>
                 {t(text)}
               </Link>
             </li>
           ))}
         </ul>
         <LanguageSelect />
+        <MenuShortcuts shortcuts={shortcuts} />
       </nav>
     </header>
   )
