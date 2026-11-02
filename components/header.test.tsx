@@ -14,6 +14,8 @@ vi.mock('@/i18n/navigation', () => ({
   )
 }))
 
+vi.mock('./menu-shortcuts', () => ({ default: () => null }))
+
 vi.mock('./language-select', () => ({
   default: () => <div data-testid="language-select" />
 }))
