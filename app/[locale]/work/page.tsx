@@ -20,7 +20,7 @@ const Work = () => {
             key={experience?.name}
             className="grid gap-6 border-b py-10 last:border-b-0 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
           >
-            <div>
+            <div className="md:sticky md:top-10 md:self-start">
               <p className="text-primary font-mono text-xs">
                 {String(index + 1).padStart(2, '0')}
               </p>

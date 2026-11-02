@@ -12,18 +12,16 @@ const Home = () => {
 
   return (
     <main className="grow">
-      <section className="container grid border-b md:grid-cols-2">
-        <div className="py-12 md:border-r md:py-24 md:pr-12">
-          <p className="text-muted-foreground mb-8 font-mono text-sm">
-            {`// ${t('role')}`}
-          </p>
-          <h1 className="text-[clamp(3.5rem,9vw,9rem)] leading-[0.88] font-bold tracking-tighter">
-            {t('headline')}{' '}
-            <span className="text-primary">{t('headlineAccent')}</span>
-          </h1>
-        </div>
-        <div className="flex flex-col justify-end gap-8 pb-12 md:py-24 md:pl-12">
-          <p className="max-w-lg text-xl leading-normal text-neutral-300">
+      <section className="container border-b pt-12 pb-12 md:pt-20 md:pb-20">
+        <p className="text-muted-foreground mb-8 font-mono text-sm">
+          {`// ${t('role')}`}
+        </p>
+        <h1 className="text-[clamp(3.5rem,11vw,11rem)] leading-[0.86] font-bold tracking-tighter">
+          {t('headline')}{' '}
+          <span className="text-primary">{t('headlineAccent')}</span>
+        </h1>
+        <div className="mt-12 grid gap-8 border-t pt-8 md:mt-16 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+          <p className="max-w-xl text-xl leading-normal text-neutral-300">
             {t('description')}
           </p>
           <div className="flex flex-wrap gap-3">
@@ -68,7 +66,7 @@ const Home = () => {
             <li key={item.title} className="bg-background">
               <NavigationLink
                 href="/work"
-                className="group flex h-full flex-col gap-5 p-8"
+                className="group flex h-full flex-col justify-between gap-5 p-8 transition-colors hover:bg-neutral-900 md:min-h-80"
               >
                 <p className="text-primary font-mono text-xs uppercase">
                   {item.company}
