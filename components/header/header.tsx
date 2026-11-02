@@ -17,13 +17,13 @@ const shortcuts = Object.fromEntries(
 
 type HeaderProps = ComponentProps<'header'>
 
-export const Header = (props: HeaderProps) => {
+export const Header = ({ className, ...props }: HeaderProps) => {
   const t = useTranslations('application.navigation')
 
   return (
     <header
       {...props}
-      className={cn('container border-b font-mono text-sm', props.className)}
+      className={cn('container border-b font-mono text-sm', className)}
     >
       <nav className="flex flex-wrap items-center justify-between gap-4 py-5">
         <NavigationLink
