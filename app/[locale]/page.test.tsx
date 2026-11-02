@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import type { ComponentProps } from 'react'
 import { createTranslator, NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { describe, expect, it, vi } from 'vitest'
@@ -19,7 +20,17 @@ vi.mock('next-intl', async (importOriginal) => {
 })
 
 vi.mock('next/font/google', () => ({
-  Inter: () => ({ className: 'inter' })
+  Space_Grotesk: () => ({ variable: 'space-grotesk' }),
+  JetBrains_Mono: () => ({ variable: 'jetbrains-mono' })
+}))
+
+vi.mock('@/i18n/navigation', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/i18n/navigation')>()),
+  Link: ({ href, children, ...props }: ComponentProps<'a'>) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
+  )
 }))
 
 vi.mock('next-intl/server', () => ({
@@ -37,14 +48,7 @@ describe('Page translations', () => {
       <NextIntlClientProvider
         locale={locale}
         messages={{
-          home: {
-            hello: messages.home.hello,
-            description: messages.home.description,
-            skills: {
-              title: messages.home.skills.title,
-              description: messages.home.skills.description
-            }
-          },
+          home: messages.home,
           blog: { ...messages.blog, title: blogTitle }
         }}
       >

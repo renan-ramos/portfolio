@@ -4,11 +4,16 @@
     "description": "Renan Garcia's personal website"
   },
   "home": {
-    "hello": "hi, I'm Renan 👋",
-    "description": "Wellcome to my portfolio. I'm a software engineer, working mostly of my time with front-end development. Right now there isn't a lot to see here 😅, but I'm working on it...",
+    "role": "senior software engineer — front-end",
+    "headline": "Interfaces that ship at",
+    "headlineAccent": "scale.",
+    "description": "Hi, I'm Renan — technical reference for front-end at Ingresso.com since 2020. I lead high-stakes launches, mentor engineers and pair closely with design.",
+    "cta": {
+      "work": "See the work",
+      "contact": "Get in touch"
+    },
     "skills": {
       "title": "Skills",
-      "description": "Here are some of the technologies I've been using at my work or in my personal projects.",
       "list": [
         "Typescript",
         "React",
@@ -19,6 +24,27 @@
         "TanStack/Query",
         "Jest",
         "Storybook"
+      ]
+    },
+    "cases": {
+      "title": "Case files",
+      "label": "selected / 03",
+      "list": [
+        {
+          "company": "Ingresso.com · 2022",
+          "title": "Rock in Rio purchase flow",
+          "description": "Rebuilt a legacy Angular.js checkout in React, Next.js, TypeScript and react-hook-form."
+        },
+        {
+          "company": "FGV DAPP · 2018",
+          "title": "observa2018",
+          "description": "Real-time PWA with push notifications tracking election mentions on social media. Featured by the press."
+        },
+        {
+          "company": "Ingresso.com",
+          "title": "Product discovery",
+          "description": "React, Next.js, React Query, Storybook and zod — tested with Jest and Playwright, shipped via GitHub Actions."
+        }
       ]
     }
   },
@@ -65,8 +91,10 @@
       "blog": "blog"
     },
     "footer": {
-      "follow": "follow me",
-      "code": "spy some code"
+      "prompt": "Have a project in mind?",
+      "talk": "Let's talk",
+      "follow": "X / Twitter",
+      "code": "GitHub"
     },
     "language": {
       "select": {

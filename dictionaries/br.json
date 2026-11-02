@@ -4,11 +4,16 @@
     "description": "Site pessoal de Renan Garcia"
   },
   "home": {
-    "hello": "prazer, Renan 👋",
-    "description": "Seja bem-vindo ao meu site pessoal. Sou engenheiro de software, atuando na maior parte do tempo com desenvolvimento web. Ainda não tem muita coisa por aqui 😅, mas eu estou trabalhando nisso...",
+    "role": "engenheiro de software sênior — front-end",
+    "headline": "Interfaces feitas para",
+    "headlineAccent": "escalar.",
+    "description": "Oi, eu sou o Renan — referência técnica de front-end na Ingresso.com desde 2020. Lidero lançamentos críticos, faço mentoria de pessoas desenvolvedoras e trabalho lado a lado com design.",
+    "cta": {
+      "work": "Veja o trabalho",
+      "contact": "Fale comigo"
+    },
     "skills": {
       "title": "Habilidades",
-      "description": "Aqui estão algumas das tecnologias que eu venho utilizando, seja no meu trabalho ou em projetos pessoais.",
       "list": [
         "Typescript",
         "React",
@@ -19,6 +24,27 @@
         "TanStack/Query",
         "Jest",
         "Storybook"
+      ]
+    },
+    "cases": {
+      "title": "Projetos",
+      "label": "seleção / 03",
+      "list": [
+        {
+          "company": "Ingresso.com · 2022",
+          "title": "Fluxo de compra do Rock in Rio",
+          "description": "Reconstrução de um checkout legado em Angular.js com React, Next.js, TypeScript e react-hook-form."
+        },
+        {
+          "company": "FGV DAPP · 2018",
+          "title": "observa2018",
+          "description": "PWA em tempo real com push notifications acompanhando menções das eleições nas redes sociais. Destaque na imprensa."
+        },
+        {
+          "company": "Ingresso.com",
+          "title": "Product discovery",
+          "description": "React, Next.js, React Query, Storybook e zod — testado com Jest e Playwright, entregue via GitHub Actions."
+        }
       ]
     }
   },
@@ -65,8 +91,10 @@
       "blog": "blog"
     },
     "footer": {
-      "follow": "me siga",
-      "code": "veja meus códigos"
+      "prompt": "Tem um projeto em mente?",
+      "talk": "Vamos conversar",
+      "follow": "X / Twitter",
+      "code": "GitHub"
     },
     "language": {
       "select": {

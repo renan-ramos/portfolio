@@ -4,12 +4,13 @@ const Blog = () => {
   const t = useTranslations('blog')
 
   return (
-    <main className="container grow">
-      <h1 className="mb-8 text-2xl font-medium tracking-tighter">
+    <main className="container grow py-14 md:py-24">
+      <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-none font-bold tracking-[-0.04em]">
         {t('title')}
       </h1>
-      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-      <p>{t('description')}</p>
+      <p className="text-muted-foreground mt-6 font-mono text-sm">
+        {`// ${t('description')}`}
+      </p>
     </main>
   )
 }
