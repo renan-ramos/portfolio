@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import { cn } from '@/lib/utils'
@@ -8,7 +8,14 @@ import { ReactNode } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 
-const inter = Inter({ subsets: ['latin'] })
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk'
+})
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono'
+})
 
 type MetadataProps = {
   params: Promise<{ locale: string }>
@@ -35,8 +42,11 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={cn(inter.className)}>
-      <body className="bg-background flex min-h-screen flex-col antialiased">
+    <html
+      lang={locale}
+      className={cn(spaceGrotesk.variable, jetbrainsMono.variable)}
+    >
+      <body className="bg-background flex min-h-screen flex-col font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
