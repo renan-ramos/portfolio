@@ -1,5 +1,5 @@
 import { useMessages, useTranslations } from 'next-intl'
-import Link from '@/components/navigation-link'
+import { NavigationLink } from '@/components/navigation-link/navigation-link'
 
 type Case = { company: string; title: string; description: string }
 
@@ -26,12 +26,12 @@ const Home = () => {
             {t('description')}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link
+            <NavigationLink
               href="/work"
               className="bg-primary text-primary-foreground inline-flex min-h-12 items-center px-6 font-bold hover:opacity-90"
             >
               {t('cta.work')} →
-            </Link>
+            </NavigationLink>
             <a
               href="https://twitter.com/RenanGarcia_dev"
               target="_blank"
@@ -70,7 +70,7 @@ const Home = () => {
         <ul className="bg-border grid gap-px border md:grid-cols-3">
           {cases.map((item) => (
             <li key={item.title} className="bg-background">
-              <Link
+              <NavigationLink
                 href="/work"
                 className="group flex h-full flex-col gap-5 p-8"
               >
@@ -83,7 +83,7 @@ const Home = () => {
                 <p className="leading-normal text-neutral-300">
                   {item.description}
                 </p>
-              </Link>
+              </NavigationLink>
             </li>
           ))}
         </ul>

@@ -12,7 +12,7 @@ const isTyping = (target: EventTarget | null) =>
   (target.isContentEditable ||
     ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
 
-const MenuShortcuts = ({ shortcuts }: MenuShortcutsProps) => {
+export const MenuShortcuts = ({ shortcuts }: MenuShortcutsProps) => {
   const router = useRouter()
 
   useEffect(() => {
@@ -31,5 +31,3 @@ const MenuShortcuts = ({ shortcuts }: MenuShortcutsProps) => {
 
   return null
 }
-
-export default MenuShortcuts
