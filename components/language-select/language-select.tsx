@@ -26,7 +26,7 @@ export const LanguageSelect = () => {
 
   return (
     <Select onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-36 cursor-pointer px-2 text-xs sm:w-44 sm:px-3 sm:text-sm">
+      <SelectTrigger className="w-44 cursor-pointer px-2 text-xs sm:px-3 sm:text-sm">
         <SelectValue placeholder={t('label')} />
       </SelectTrigger>
       <SelectContent>
