@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { describe, expect, it, vi } from 'vitest'
 import en from '@/dictionaries/en.json'
 import br from '@/dictionaries/br.json'
-import Header from './header'
+import { Header } from '../header/header'
 
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: ComponentProps<'a'>) => (

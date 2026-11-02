@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils'
 import { ComponentProps } from 'react'
 import { useTranslations } from 'next-intl'
-import LanguageSelect from './language-select'
-import MenuShortcuts from './menu-shortcuts'
-import Link from './navigation-link'
+import { LanguageSelect } from '@/components/language-select/language-select'
+import { MenuShortcuts } from '@/components/menu-shortcuts/menu-shortcuts'
+import { NavigationLink } from '@/components/navigation-link/navigation-link'
 
 const menuItems = {
   '/': { text: 'home', key: 'h' },
@@ -17,7 +17,7 @@ const shortcuts = Object.fromEntries(
 
 type HeaderProps = ComponentProps<'header'>
 
-const Header = (props: HeaderProps) => {
+export const Header = (props: HeaderProps) => {
   const t = useTranslations('application.navigation')
 
   return (
@@ -26,24 +26,24 @@ const Header = (props: HeaderProps) => {
       className={cn('container border-b font-mono text-sm', props.className)}
     >
       <nav className="flex flex-wrap items-center justify-between gap-4 py-5">
-        <Link href="/" className="hover:text-primary flex items-center gap-2.5">
+        <NavigationLink href="/" className="hover:text-primary flex items-center gap-2.5">
           <span
             aria-hidden="true"
             className="bg-primary size-2.5 rounded-full"
           />
           renan.garcia
-        </Link>
+        </NavigationLink>
         <ul className="order-last flex w-full flex-wrap justify-between gap-x-4 gap-y-2 md:order-none md:w-auto md:gap-7">
           {Object.entries(menuItems).map(([path, { text, key }]) => (
             <li key={path}>
-              <Link
+              <NavigationLink
                 href={path}
                 aria-keyshortcuts={key}
                 className="hover:text-primary transition-colors"
               >
                 <span aria-hidden="true">[{key.toUpperCase()}] </span>
                 {t(text)}
-              </Link>
+              </NavigationLink>
             </li>
           ))}
         </ul>
@@ -53,5 +53,3 @@ const Header = (props: HeaderProps) => {
     </header>
   )
 }
-
-export default Header

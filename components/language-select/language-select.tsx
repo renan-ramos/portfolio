@@ -8,10 +8,10 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue
-} from './ui/select'
+} from '../ui/select'
 import { usePathname, useRouter } from '@/i18n/navigation'
 
-const LanguageSelect = () => {
+export const LanguageSelect = () => {
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations('application.language.select')
@@ -26,17 +26,15 @@ const LanguageSelect = () => {
 
   return (
     <Select onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-36 px-2 text-xs sm:w-44 sm:px-3 sm:text-sm">
+      <SelectTrigger className="w-36 px-2 text-xs sm:w-44 sm:px-3 sm:text-sm cursor-pointer">
         <SelectValue placeholder={t('label')} />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="en">{t('en')}</SelectItem>
-          <SelectItem value="br">{t('br')}</SelectItem>
+          <SelectItem value="en" className="cursor-pointer">{t('en')}</SelectItem>
+          <SelectItem value="br" className="cursor-pointer">{t('br')}</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
   )
 }
-
-export default LanguageSelect
