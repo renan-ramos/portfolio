@@ -3,6 +3,7 @@ import { JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/header/header'
 import { cn } from '@/lib/utils'
+import { PageTransitionProvider } from '@/components/page-transition/page-transition'
 import { Footer } from '@/components/footer/footer'
 import { ReactNode } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
@@ -48,9 +49,11 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
     >
       <body className="bg-background flex min-h-screen flex-col font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
+          <PageTransitionProvider>
+            <Header />
+            {children}
+            <Footer />
+          </PageTransitionProvider>
         </NextIntlClientProvider>
       </body>
     </html>
