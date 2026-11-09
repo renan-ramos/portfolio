@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useRouter } from '@/i18n/navigation'
+import { useTransitionNavigate } from '@/components/page-transition/page-transition'
 
 type MenuShortcutsProps = {
   shortcuts: Record<string, string>
@@ -13,7 +13,7 @@ const isTyping = (target: EventTarget | null) =>
     ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
 
 export const MenuShortcuts = ({ shortcuts }: MenuShortcutsProps) => {
-  const router = useRouter()
+  const navigate = useTransitionNavigate()
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -22,12 +22,12 @@ export const MenuShortcuts = ({ shortcuts }: MenuShortcutsProps) => {
       if (isTyping(event.target)) return
 
       const path = shortcuts[event.key.toLowerCase()]
-      if (path) router.push(path)
+      if (path) navigate(path)
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [router, shortcuts])
+  }, [navigate, shortcuts])
 
   return null
 }
