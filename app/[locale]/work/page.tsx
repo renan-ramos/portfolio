@@ -1,3 +1,5 @@
+import * as motion from 'motion/react-client'
+import { Words, fadeUp } from '@/components/hero-motion/hero-motion'
 import { useMessages, useTranslations } from 'next-intl'
 
 const Work = () => {
@@ -8,11 +10,14 @@ const Work = () => {
   return (
     <main className="container grow py-14 md:py-24">
       <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-none font-bold tracking-[-0.04em]">
-        {t('title')}
+        <Words text={t('title')} />
       </h1>
-      <p className="text-muted-foreground mt-6 mb-12 font-mono text-sm">
+      <motion.p
+        {...fadeUp(0.3)}
+        className="text-muted-foreground mt-6 mb-12 font-mono text-sm"
+      >
         {`// ${t('description')}`}
-      </p>
+      </motion.p>
 
       <ol className="border-t">
         {experiences?.map((experience: any, index: number) => (
