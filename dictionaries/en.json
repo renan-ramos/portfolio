@@ -4,11 +4,16 @@
     "description": "Renan Garcia's personal website"
   },
   "home": {
-    "hello": "hi, I'm Renan 👋",
-    "description": "Welcome to my portfolio. I'm a software engineer, working mostly of my time with front-end development. Right now there isn't a lot to see here 😅, but I'm working on it...",
+    "role": "senior software engineer — front-end",
+    "headline": "Interfaces that ship at",
+    "headlineAccent": "scale.",
+    "description": "Hi, I'm Renan — technical reference for front-end at Ingresso.com since 2020. I lead high-stakes launches, mentor engineers and pair closely with design.",
+    "cta": {
+      "work": "See the work",
+      "contact": "Get in touch"
+    },
     "skills": {
       "title": "Skills",
-      "description": "Here are some of the technologies I've been using at my work or in my personal projects.",
       "list": [
         "Typescript",
         "React",
@@ -19,6 +24,33 @@
         "TanStack/Query",
         "Jest",
         "Storybook"
+      ]
+    },
+    "cases": {
+      "title": "Case files",
+      "label": "selected / 03",
+      "list": [
+        {
+          "company": "Ingresso.com · 2022",
+          "work": 1,
+          "title": "Rock in Rio purchase flow",
+          "stack": ["React", "Next.js", "TypeScript", "react-hook-form"],
+          "description": "Rebuilt a legacy Angular.js checkout in React, Next.js, TypeScript and react-hook-form."
+        },
+        {
+          "company": "Ingresso.com",
+          "work": 1,
+          "title": "Product discovery",
+          "stack": ["React Query", "Storybook", "zod", "Playwright"],
+          "description": "React, Next.js, React Query, Storybook and zod — tested with Jest and Playwright, shipped via GitHub Actions."
+        },
+        {
+          "company": "FGV DAPP · 2018",
+          "work": 2,
+          "title": "observa2018",
+          "stack": ["Vue.js", "Express", "PWA", "Push"],
+          "description": "Real-time PWA with push notifications tracking election mentions on social media. Featured by the press."
+        }
       ]
     }
   },
@@ -58,6 +90,19 @@
     "title": "Blog",
     "description": "Here you'll find some posts about my journey as a software engineer. I hope you enjoy it."
   },
+  "contact": {
+    "title": "Get in touch",
+    "description": "Tell me about your project. Your message goes straight to my inbox.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "errors": {
+      "required": "This field is required.",
+      "invalidEmail": "Enter a valid email address.",
+      "tooLong": "This text is too long."
+    }
+  },
   "application": {
     "navigation": {
       "home": "home",
@@ -65,8 +110,10 @@
       "blog": "blog"
     },
     "footer": {
-      "follow": "follow me",
-      "code": "spy some code"
+      "prompt": "Have a project in mind?",
+      "talk": "Let's talk",
+      "follow": "X / Twitter",
+      "code": "GitHub"
     },
     "language": {
       "select": {
