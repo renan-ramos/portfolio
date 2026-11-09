@@ -34,19 +34,22 @@
           "company": "Ingresso.com · 2022",
           "work": 1,
           "title": "Rock in Rio purchase flow",
+          "stack": ["React", "Next.js", "TypeScript", "react-hook-form"],
           "description": "Rebuilt a legacy Angular.js checkout in React, Next.js, TypeScript and react-hook-form."
-        },
-        {
-          "company": "FGV DAPP · 2018",
-          "work": 2,
-          "title": "observa2018",
-          "description": "Real-time PWA with push notifications tracking election mentions on social media. Featured by the press."
         },
         {
           "company": "Ingresso.com",
           "work": 1,
           "title": "Product discovery",
+          "stack": ["React Query", "Storybook", "zod", "Playwright"],
           "description": "React, Next.js, React Query, Storybook and zod — tested with Jest and Playwright, shipped via GitHub Actions."
+        },
+        {
+          "company": "FGV DAPP · 2018",
+          "work": 2,
+          "title": "observa2018",
+          "stack": ["Vue.js", "Express", "PWA", "Push"],
+          "description": "Real-time PWA with push notifications tracking election mentions on social media. Featured by the press."
         }
       ]
     }

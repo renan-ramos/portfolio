@@ -5,7 +5,7 @@
   },
   "home": {
     "role": "engenheiro de software sênior — front-end",
-    "headline": "Interfaces feitas\u00a0para",
+    "headline": "Interfaces feitas para",
     "headlineAccent": "escalar.",
     "description": "Oi, eu sou o Renan — referência técnica de front-end na Ingresso.com desde 2020. Lidero lançamentos críticos, faço mentoria de pessoas desenvolvedoras e trabalho lado a lado com design.",
     "cta": {
@@ -27,26 +27,29 @@
       ]
     },
     "cases": {
-      "title": "Projetos",
+      "title": "Estudos de caso",
       "label": "seleção / 03",
       "list": [
         {
           "company": "Ingresso.com · 2022",
           "work": 1,
           "title": "Fluxo de compra do Rock in Rio",
+          "stack": ["React", "Next.js", "TypeScript", "react-hook-form"],
           "description": "Reconstrução de um checkout legado em Angular.js com React, Next.js, TypeScript e react-hook-form."
-        },
-        {
-          "company": "FGV DAPP · 2018",
-          "work": 2,
-          "title": "observa2018",
-          "description": "PWA em tempo real com push notifications acompanhando menções das eleições nas redes sociais. Destaque na imprensa."
         },
         {
           "company": "Ingresso.com",
           "work": 1,
           "title": "Product discovery",
+          "stack": ["React Query", "Storybook", "zod", "Playwright"],
           "description": "React, Next.js, React Query, Storybook e zod — testado com Jest e Playwright, entregue via GitHub Actions."
+        },
+        {
+          "company": "FGV DAPP · 2018",
+          "work": 2,
+          "title": "observa2018",
+          "stack": ["Vue.js", "Express", "PWA", "Push"],
+          "description": "PWA em tempo real com push notifications acompanhando menções das eleições nas redes sociais. Destaque na imprensa."
         }
       ]
     }
