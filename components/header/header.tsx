@@ -55,7 +55,7 @@ export const Header = ({ className, ...props }: HeaderProps) => {
                 href={path}
                 aria-keyshortcuts={key}
                 aria-current={pathname === path ? 'page' : undefined}
-                className="hover:text-primary aria-[current=page]:text-primary uppercase transition-colors"
+                className="hover:text-primary aria-[current=page]:text-primary after:bg-primary relative uppercase transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:after:transition-none"
               >
                 <span aria-hidden="true">[{key.toUpperCase()}] </span>
                 {t(text)}
