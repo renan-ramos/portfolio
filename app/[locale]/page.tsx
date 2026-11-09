@@ -42,9 +42,15 @@ const Home = () => {
           <div className="flex flex-wrap gap-3">
             <NavigationLink
               href="/work"
-              className="bg-primary text-primary-foreground inline-flex min-h-12 items-center px-6 font-bold hover:opacity-90"
+              className="group bg-primary text-primary-foreground inline-flex min-h-12 items-center gap-2 px-6 font-bold hover:opacity-90"
             >
-              {t('cta.work')} →
+              {t('cta.work')}
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform duration-300 group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 motion-reduce:transition-none"
+              >
+                →
+              </span>
             </NavigationLink>
             <ContactDrawer className="border-foreground hover:border-primary hover:text-primary inline-flex min-h-12 items-center border px-6 font-medium">
               {t('cta.contact')}
