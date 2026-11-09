@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import type { ComponentProps } from 'react'
 import { describe, expect, it, vi } from 'vitest'
-import NavigationLink from './navigation-link'
+import { NavigationLink } from './navigation-link'
 
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: ComponentProps<'a'>) => (

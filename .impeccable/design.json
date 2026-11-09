@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T00:00:00.000Z",
+  "title": "Design System: Renan Garcia",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Acid Signal Lime",
+        "canonical": "hsl(74 100% 61%)",
+        "tonalRamp": ["hsl(74 100% 15%)", "hsl(74 100% 25%)", "hsl(74 100% 35%)", "hsl(74 100% 45%)", "hsl(74 100% 61%)", "hsl(74 100% 75%)", "hsl(74 100% 85%)", "hsl(74 100% 95%)"]
+      },
+      "primary-foreground": {
+        "role": "neutral",
+        "displayName": "Ink Black",
+        "canonical": "hsl(240 4% 4.5%)",
+        "tonalRamp": ["hsl(240 4% 2%)", "hsl(240 4% 4.5%)", "hsl(240 4% 8%)", "hsl(240 4% 15%)", "hsl(240 4% 25%)", "hsl(240 4% 45%)", "hsl(240 4% 70%)", "hsl(240 4% 95%)"]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Ink Black",
+        "canonical": "hsl(240 4% 4.5%)",
+        "tonalRamp": ["hsl(240 4% 2%)", "hsl(240 4% 4.5%)", "hsl(240 4% 8%)", "hsl(240 4% 15%)", "hsl(240 4% 25%)", "hsl(240 4% 45%)", "hsl(240 4% 70%)", "hsl(240 4% 95%)"]
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Paper Off-White",
+        "canonical": "hsl(60 9% 92%)",
+        "tonalRamp": ["hsl(60 9% 15%)", "hsl(60 9% 25%)", "hsl(60 9% 40%)", "hsl(60 9% 55%)", "hsl(60 9% 70%)", "hsl(60 9% 80%)", "hsl(60 9% 86%)", "hsl(60 9% 92%)"]
+      },
+      "popover": {
+        "role": "neutral",
+        "displayName": "Popover Ink",
+        "canonical": "hsl(240 4% 8%)",
+        "tonalRamp": ["hsl(240 4% 2%)", "hsl(240 4% 4.5%)", "hsl(240 4% 8%)", "hsl(240 4% 15%)", "hsl(240 4% 25%)", "hsl(240 4% 45%)", "hsl(240 4% 70%)", "hsl(240 4% 95%)"]
+      },
+      "secondary": {
+        "role": "secondary",
+        "displayName": "Graphite Fill",
+        "canonical": "hsl(240 4% 15%)",
+        "tonalRamp": ["hsl(240 4% 2%)", "hsl(240 4% 4.5%)", "hsl(240 4% 8%)", "hsl(240 4% 15%)", "hsl(240 4% 25%)", "hsl(240 4% 45%)", "hsl(240 4% 70%)", "hsl(240 4% 95%)"]
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Ash Grey",
+        "canonical": "hsl(60 2% 63%)",
+        "tonalRamp": ["hsl(60 2% 15%)", "hsl(60 2% 25%)", "hsl(60 2% 40%)", "hsl(60 2% 50%)", "hsl(60 2% 63%)", "hsl(60 2% 75%)", "hsl(60 2% 85%)", "hsl(60 2% 95%)"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Rule Grey",
+        "canonical": "hsl(240 4% 17%)",
+        "tonalRamp": ["hsl(240 4% 2%)", "hsl(240 4% 4.5%)", "hsl(240 4% 8%)", "hsl(240 4% 17%)", "hsl(240 4% 25%)", "hsl(240 4% 45%)", "hsl(240 4% 70%)", "hsl(240 4% 95%)"]
+      },
+      "destructive": {
+        "role": "secondary",
+        "displayName": "Alert Red",
+        "canonical": "hsl(0 62.8% 30.6%)",
+        "tonalRamp": ["hsl(0 62.8% 15%)", "hsl(0 62.8% 22%)", "hsl(0 62.8% 30.6%)", "hsl(0 62.8% 40%)", "hsl(0 62.8% 50%)", "hsl(0 62.8% 65%)", "hsl(0 62.8% 80%)", "hsl(0 62.8% 95%)"]
+      },
+      "destructive-foreground": {
+        "role": "neutral",
+        "displayName": "Alert Pale",
+        "canonical": "hsl(0 85.7% 97.3%)",
+        "tonalRamp": ["hsl(0 85.7% 40%)", "hsl(0 85.7% 60%)", "hsl(0 85.7% 75%)", "hsl(0 85.7% 85%)", "hsl(0 85.7% 91%)", "hsl(0 85.7% 95%)", "hsl(0 85.7% 97.3%)", "hsl(0 85.7% 99%)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The hero headline only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles such as Cases." },
+      "title": { "displayName": "Title", "purpose": "Case-file titles." },
+      "body": { "displayName": "Body", "purpose": "Descriptions and copy." },
+      "label": { "displayName": "Label", "purpose": "Mono metadata, nav, stacks, company names, footer meta." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "transition-colors", "value": "color, background-color, border-color 150ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Hover and current-state colour changes on links, rows and chips." },
+      { "name": "accordion-down", "value": "0.2s ease-out", "purpose": "Radix accordion open animation." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "container-max", "value": "1400px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA: solid lime block with ink text, used for View work and the header-adjacent actions.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">→ View work</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 1.5rem; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); font-weight: 700; text-decoration: none; border-radius: 0; transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn-primary:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action with a 1px Paper border, used for Contact.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Contact</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 1.5rem; background: transparent; color: hsl(var(--foreground)); border: 1px solid hsl(var(--foreground)); font-weight: 500; text-decoration: none; border-radius: 0; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-outline:hover { color: hsl(var(--primary)); border-color: hsl(var(--primary)); } .ds-btn-outline:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Case File Row",
+      "kind": "card",
+      "refersTo": "case-row-hover",
+      "description": "Full-width case link; fills lime on hover and inverts its text.",
+      "html": "<a class=\"ds-case\" href=\"#\"><div><h3 class=\"ds-case-title\">Rock in Rio purchase flow</h3><p class=\"ds-case-desc\">Ticket purchase flow rebuilt for Ingresso.com.</p><ul class=\"ds-case-tags\"><li class=\"ds-chip\">Next.js</li><li class=\"ds-chip\">React</li></ul></div><p class=\"ds-case-company\">Ingresso.com</p></a>",
+      "css": ".ds-case { display: flex; flex-wrap: wrap; gap: 1.5rem 2rem; padding: 2.5rem 1.5rem; border-bottom: 1px solid hsl(var(--border)); color: hsl(var(--foreground)); text-decoration: none; transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-case:hover, .ds-case:focus-visible { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); } .ds-case:focus-visible { outline: 2px solid hsl(var(--foreground)); outline-offset: -2px; } .ds-case-title { margin: 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; } .ds-case-desc { margin: 1rem 0 0; max-width: 36rem; font-size: 1.125rem; line-height: 1.5; color: hsl(60 2% 63%); } .ds-case:hover .ds-case-desc, .ds-case:focus-visible .ds-case-desc { color: hsl(var(--primary-foreground)); } .ds-case-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 0; padding: 0; list-style: none; } .ds-case-company { flex: 1 1 11rem; margin: 0.25rem 0 0; font-family: ui-monospace, monospace; font-size: 0.75rem; text-transform: uppercase; color: hsl(var(--primary)); } .ds-case:hover .ds-case-company, .ds-case:focus-visible .ds-case-company { color: hsl(var(--primary-foreground)); } .ds-chip { border: 1px solid hsl(240 4% 17%); padding: 0.25rem 0.625rem; font-family: ui-monospace, monospace; font-size: 0.75rem; color: hsl(60 2% 63%); list-style: none; } .ds-case:hover .ds-chip, .ds-case:focus-visible .ds-chip { border-color: hsl(var(--primary-foreground)); color: hsl(var(--primary-foreground)); }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Stack tag: 1px rule border, mono label.",
+      "html": "<span class=\"ds-chip\">TypeScript</span>",
+      "css": ".ds-chip { display: inline-block; border: 1px solid hsl(240 4% 17%); padding: 0.25rem 0.625rem; font-family: ui-monospace, monospace; font-size: 0.75rem; color: hsl(60 2% 63%); border-radius: 0; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "button-outline",
+      "description": "Contact drawer field: transparent, 1px rule stroke, lime focus border.",
+      "html": "<input class=\"ds-input\" name=\"name\" placeholder=\"Name\" />",
+      "css": ".ds-input { width: 100%; background: transparent; border: 1px solid hsl(240 4% 17%); padding: 0.5rem 0.75rem; font: inherit; font-size: 1rem; color: hsl(60 9% 92%); outline: none; border-radius: 0; } .ds-input:focus-visible { border-color: hsl(74 100% 61%); }"
+    },
+    {
+      "name": "Header Nav Link",
+      "kind": "nav",
+      "refersTo": "chip",
+      "description": "Mono uppercase nav item with a bracketed shortcut key; lime when current or hovered.",
+      "html": "<a class=\"ds-nav\" href=\"#\" aria-current=\"page\"><span aria-hidden=\"true\">[H] </span>Home</a>",
+      "css": ".ds-nav { font-family: ui-monospace, monospace; font-size: 0.875rem; text-transform: uppercase; color: hsl(var(--foreground)); text-decoration: none; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-nav:hover, .ds-nav[aria-current=\"page\"] { color: hsl(var(--primary)); } .ds-nav:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Skills Band",
+      "kind": "custom",
+      "refersTo": "skill-band",
+      "description": "Full-width lime strip of uppercase mono skills, separated by pipes.",
+      "html": "<section class=\"ds-band\"><ul class=\"ds-band-list\"><li>React</li><li>Next.js</li><li>TypeScript</li></ul></section>",
+      "css": ".ds-band { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 1rem 0; overflow: hidden; font-family: ui-monospace, monospace; white-space: nowrap; } .ds-band-list { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; margin: 0 auto; padding: 0 1rem; list-style: none; text-transform: uppercase; } .ds-band-list li { display: flex; gap: 0.75rem; } .ds-band-list li:not(:last-child)::after { content: '|'; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signal Dossier",
+    "overview": "The site reads as a case file kept in the dark. Near-black surfaces, hairline rules and monospace metadata set the frame, and one acid lime signal marks only what the visitor should act on or read first. The personality is direct and technical. Nothing is rounded, nothing glows, and the headline does the work that imagery would do on other portfolios.",
+    "keyCharacteristics": [
+      "Dark near-black field with off-white text and a single lime accent.",
+      "Square geometry: every radius token resolves to 0.",
+      "Hairline rules divide content; surfaces stay flat.",
+      "Monospace for metadata, grotesk for everything a visitor reads as copy."
+    ],
+    "rules": [
+      { "name": "The Single Signal Rule", "body": "Lime marks action and emphasis only: the CTA, the headline accent, current navigation, the skills band and the hovered case row. It never becomes body colour or a second accent.", "section": "colors" },
+      { "name": "The Mono Evidence Rule", "body": "Metadata, labels and proof tags are set in JetBrains Mono. Grotesk carries claims; mono carries the facts about them.", "section": "typography" }
+    ],
+    "dos": [
+      "Do keep every radius at 0px; the token resolves to zero.",
+      "Do reserve Acid Lime for the roles listed in the Single Signal Rule.",
+      "Do set metadata and labels in JetBrains Mono.",
+      "Do separate sections with 1px Rule borders rather than cards or shadows."
+    ],
+    "donts": [
+      "Don't add a second accent colour; the lime is the only accent in the code.",
+      "Don't introduce rounded corners on buttons, chips, inputs or rows.",
+      "Don't use Alert Red as text on Ink Black at its current lightness; it is low contrast and needs a lighter value before it is used for error copy."
+    ]
+  }
+}
