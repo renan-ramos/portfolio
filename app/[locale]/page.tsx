@@ -1,8 +1,15 @@
 import { useMessages, useTranslations } from 'next-intl'
 import { ContactDrawer } from '@/components/contact-drawer/contact-drawer'
 import { NavigationLink } from '@/components/navigation-link/navigation-link'
+import { cn } from '@/lib/utils'
 
-type Case = { company: string; work: number; title: string; description: string }
+type Case = {
+  company: string
+  work: number
+  title: string
+  stack: string[]
+  description: string
+}
 
 const Home = () => {
   const t = useTranslations('home')
@@ -61,26 +68,53 @@ const Home = () => {
             {t('cases.label')}
           </p>
         </div>
-        <ul className="bg-border grid gap-px border md:grid-cols-3">
-          {cases.map((item) => (
-            <li key={item.title} className="bg-background">
+        <ol className="border-t">
+          {cases.map((item, index) => (
+            <li key={item.title} className="border-b">
               <NavigationLink
                 href={`/work#work-${item.work}`}
-                className="group flex h-full flex-col justify-between gap-5 p-8 transition-colors hover:bg-neutral-900 md:min-h-80"
+                className={cn(
+                  'group hover:bg-primary hover:text-primary-foreground focus-visible:outline-foreground flex flex-col px-6 transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2',
+                  index === 0 ? 'py-12 md:py-20' : 'py-8 md:py-10'
+                )}
               >
-                <p className="text-primary font-mono text-xs uppercase">
-                  {item.company}
-                </p>
-                <h3 className="group-hover:text-primary text-3xl font-bold tracking-[-0.03em]">
+                <h3
+                  className={cn(
+                    index === 0
+                      ? 'text-[clamp(3rem,9vw,8rem)] leading-[0.9] tracking-tighter'
+                      : 'text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.05] tracking-[-0.03em]',
+                    'font-bold'
+                  )}
+                >
                   {item.title}
                 </h3>
-                <p className="leading-normal text-neutral-300">
+                <p className="text-muted-foreground group-hover:text-primary-foreground mt-3 font-mono text-xs uppercase">
+                  {item.company}
+                </p>
+                <p
+                  className={cn(
+                    index === 0
+                      ? 'mt-6 text-xl md:text-2xl'
+                      : 'mt-3 text-base md:text-lg',
+                    'group-hover:text-primary-foreground max-w-152 leading-normal text-neutral-300'
+                  )}
+                >
                   {item.description}
                 </p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {item.stack.map((tech) => (
+                    <li
+                      key={tech}
+                      className="text-muted-foreground group-hover:border-primary-foreground group-hover:text-primary-foreground border px-2.5 py-1 font-mono text-xs"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
               </NavigationLink>
             </li>
           ))}
-        </ul>
+        </ol>
       </section>
     </main>
   )
