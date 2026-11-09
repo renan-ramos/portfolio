@@ -9,11 +9,11 @@ export const Footer = () => {
       <p className="text-muted-foreground font-mono text-sm tracking-widest uppercase">
         {t('prompt')}
       </p>
-      <ContactDrawer className="hover:text-primary mt-4 mb-16 block text-left text-[clamp(3rem,10vw,10rem)] leading-[0.9] font-bold tracking-[-0.06em] transition-colors">
+      <ContactDrawer className="group hover:text-primary mt-4 mb-16 block text-left text-[clamp(3rem,10vw,10rem)] leading-[0.9] font-bold tracking-[-0.06em] transition-colors">
         {t('talk')}
         <span
           aria-hidden="true"
-          className="text-primary ml-[0.15em] align-middle text-[0.4em]"
+          className="text-primary ml-[0.15em] inline-block align-middle text-[0.4em] transition-transform duration-300 group-hover:translate-x-[0.5em] group-focus-visible:translate-x-[0.5em] motion-reduce:transition-none"
         >
           →
         </span>
