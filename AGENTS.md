@@ -30,3 +30,7 @@ Take the first option that fully works:
 Never cut: validation at trust boundaries, error handling that prevents data loss, security, accessibility, the calibration real hardware needs, anything the user asked for.
 
 (Yes, this file also applies to agents working on the ponytail repo itself. Especially to them.)
+
+## ui-sdk
+
+Before using ui-sdk, follow the ui-sdk skill if it's installed, and read `node_modules/@ui-sdk/react/docs/llms.txt`. To build a new component, also search `node_modules/@ui-sdk/react/docs/core.md` by heading, and read `rendering.md` next to it.
