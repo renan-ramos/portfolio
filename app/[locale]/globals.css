@@ -162,6 +162,18 @@
     @apply bg-background text-foreground;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (width < --theme(--breakpoint-md)) {
+    html {
+      scroll-padding-top: 8rem;
+    }
+  }
+
   ::selection {
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));

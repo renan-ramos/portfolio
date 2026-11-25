@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { MotionProvider } from '@/components/motion-provider/motion-provider'
 import { PageTransitionProvider } from '@/components/page-transition/page-transition'
 import { Footer } from '@/components/footer/footer'
+import { ScrollToTop } from '@/components/scroll-to-top/scroll-to-top'
 import { ReactNode } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
@@ -46,6 +47,7 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   return (
     <html
       lang={locale}
+      data-scroll-behavior="smooth"
       className={cn(spaceGrotesk.variable, jetbrainsMono.variable)}
     >
       <body className="bg-background flex min-h-screen flex-col font-sans antialiased">
@@ -55,6 +57,7 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
               <Header />
               {children}
               <Footer />
+              <ScrollToTop />
             </PageTransitionProvider>
           </MotionProvider>
         </NextIntlClientProvider>

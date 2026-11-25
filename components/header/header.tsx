@@ -27,7 +27,10 @@ export const Header = ({ className, ...props }: HeaderProps) => {
   return (
     <header
       {...props}
-      className={cn('container border-b font-mono text-sm', className)}
+      className={cn(
+        'bg-background container border-b font-mono text-sm max-md:sticky max-md:top-0 max-md:z-40',
+        className
+      )}
     >
       <nav className="flex flex-wrap items-center justify-between gap-4 py-5">
         <NavigationLink

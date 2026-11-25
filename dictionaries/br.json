@@ -104,6 +104,7 @@
     }
   },
   "application": {
+    "scrollToTop": "Voltar ao topo",
     "navigation": {
       "home": "início",
       "work": "trabalho",
