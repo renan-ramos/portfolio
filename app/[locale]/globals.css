@@ -1,5 +1,46 @@
+@layer ui-sdk;
 @import 'tailwindcss';
-@plugin 'tailwindcss-animate';
+@import '@ui-sdk/core/web.css' layer(components);
+
+/* Rules directly in `components` beat web.css, nested as components.ui-sdk, and still lose to utilities. */
+@layer components {
+  :root {
+    color-scheme: dark;
+    --ui-background: hsl(var(--background));
+    --ui-foreground: hsl(var(--foreground));
+    --ui-muted: hsl(var(--muted));
+    --ui-muted-foreground: hsl(var(--muted-foreground));
+    --ui-border: hsl(var(--border));
+    --ui-input: hsl(var(--input));
+    --ui-primary: hsl(var(--primary));
+    --ui-primary-foreground: hsl(var(--primary-foreground));
+    --ui-destructive: hsl(var(--destructive));
+    --ui-ring: hsl(var(--ring));
+    --ui-ring-border: hsl(var(--ring));
+    --ui-font-sans: var(--font-sans);
+    --ui-font-mono: var(--font-mono);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  /* The site's drawer triggers are a headline and an outline CTA, not ui-sdk buttons. */
+  [data-slot='drawer-trigger'] {
+    display: inline-block;
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    white-space: normal;
+
+    &:hover {
+      background: none;
+    }
+  }
+}
 
 @utility container {
   margin-inline: auto;
@@ -89,7 +130,6 @@
 /* Signal theme: dark-only, acid accent */
 @layer base {
   :root {
-    color-scheme: dark;
     --background: 240 4% 4.5%;
     --foreground: 60 9% 92%;
     --card: 240 4% 4.5%;
