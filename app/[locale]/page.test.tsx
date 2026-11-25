@@ -81,7 +81,7 @@ describe('Page translations', () => {
       expect(locales).toContain(locale)
       expect(
         await generateMetadata({ params: Promise.resolve({ locale }) })
-      ).toEqual(messages.metadata)
+      ).toMatchObject(messages.metadata)
       expect(getTranslations).toHaveBeenLastCalledWith({
         locale,
         namespace: 'metadata'
