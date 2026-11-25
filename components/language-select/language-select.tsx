@@ -4,11 +4,10 @@ import { useTranslations } from 'next-intl'
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue
-} from '../ui/select'
+} from '@ui-sdk/react/select'
 import { usePathname, useRouter } from '@/i18n/navigation'
 
 export const LanguageSelect = () => {
@@ -16,7 +15,7 @@ export const LanguageSelect = () => {
   const pathname = usePathname()
   const t = useTranslations('application.language.select')
 
-  const handleLanguageChange = (value: string) => {
+  const handleLanguageChange = (value: string | null) => {
     if (value !== 'en' && value !== 'br') {
       throw new Error(`Unsupported locale: ${value}`)
     }
@@ -25,19 +24,20 @@ export const LanguageSelect = () => {
   }
 
   return (
-    <Select onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-44 cursor-pointer px-2 text-xs sm:px-3 sm:text-sm">
-        <SelectValue placeholder={t('label')} />
+    <Select placeholder={t('label')} onValueChange={handleLanguageChange}>
+      <SelectTrigger
+        aria-label={t('label')}
+        className="h-9 w-44 min-w-0 cursor-pointer px-2 text-xs sm:px-3 sm:text-sm"
+      >
+        <SelectValue />
       </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectItem value="en" className="cursor-pointer">
-            {t('en')}
-          </SelectItem>
-          <SelectItem value="br" className="cursor-pointer">
-            {t('br')}
-          </SelectItem>
-        </SelectGroup>
+      <SelectContent className="bg-popover">
+        <SelectItem value="en" className="cursor-pointer">
+          {t('en')}
+        </SelectItem>
+        <SelectItem value="br" className="cursor-pointer">
+          {t('br')}
+        </SelectItem>
       </SelectContent>
     </Select>
   )
