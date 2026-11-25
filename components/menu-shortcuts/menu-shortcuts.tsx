@@ -7,10 +7,12 @@ type MenuShortcutsProps = {
   shortcuts: Record<string, string>
 }
 
+// Text fields, plus widgets that use letters themselves (select typeahead, open dialogs)
 const isTyping = (target: EventTarget | null) =>
   target instanceof HTMLElement &&
   (target.isContentEditable ||
-    ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
+    ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) ||
+    target.closest('[role=dialog],[role=listbox],[role=combobox]') !== null)
 
 export const MenuShortcuts = ({ shortcuts }: MenuShortcutsProps) => {
   const navigate = useTransitionNavigate()
