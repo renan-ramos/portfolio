@@ -44,4 +44,26 @@ describe('MenuShortcuts', () => {
 
     expect(push).not.toHaveBeenCalled()
   })
+
+  it('ignores keys inside dialogs and select widgets', async () => {
+    const user = userEvent.setup()
+
+    render(
+      <>
+        <MenuShortcuts shortcuts={shortcuts} />
+        <div role="dialog">
+          <button>send</button>
+        </div>
+        <button role="combobox" aria-expanded="false" aria-controls="list">
+          language
+        </button>
+      </>
+    )
+    await user.click(document.querySelector('[role=dialog] button')!)
+    await user.keyboard('w')
+    await user.click(document.querySelector('[role=combobox]')!)
+    await user.keyboard('b')
+
+    expect(push).not.toHaveBeenCalled()
+  })
 })
