@@ -10,6 +10,8 @@ import { ScrollToTop } from '@/components/scroll-to-top/scroll-to-top'
 import { ReactNode } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
+import { locales } from '@/i18n/navigation'
+import { htmlLang, siteUrl } from '@/lib/seo'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -19,6 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains-mono'
 })
+
+export const generateStaticParams = () => locales.map((locale) => ({ locale }))
 
 type MetadataProps = {
   params: Promise<{ locale: string }>
@@ -31,6 +35,7 @@ export const generateMetadata = async ({
   const t = await getTranslations({ locale, namespace: 'metadata' })
 
   return {
+    metadataBase: siteUrl,
     title: t('title'),
     description: t('description')
   }
@@ -46,7 +51,7 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
 
   return (
     <html
-      lang={locale}
+      lang={htmlLang(locale)}
       data-scroll-behavior="smooth"
       className={cn(spaceGrotesk.variable, jetbrainsMono.variable)}
     >

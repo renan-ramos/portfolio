@@ -88,6 +88,21 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
+  --animate-rise: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes rise {
+    from {
+      transform: translateY(110%);
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
@@ -177,5 +192,13 @@
   ::selection {
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
+  }
+}
+
+/* Unlayered so it beats the animate-* utilities */
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .animate-fade-up {
+    animation: none;
   }
 }

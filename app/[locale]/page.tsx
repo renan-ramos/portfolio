@@ -1,6 +1,6 @@
-import * as motion from 'motion/react-client'
 import { useMessages, useTranslations } from 'next-intl'
-import { Words, fadeUp } from '@/components/hero-motion/hero-motion'
+import { Words } from '@/components/hero-motion/hero-motion'
+import { alternates } from '@/lib/seo'
 import { ContactDrawer } from '@/components/contact-drawer/contact-drawer'
 import { NavigationLink } from '@/components/navigation-link/navigation-link'
 import { cn } from '@/lib/utils'
@@ -13,6 +13,12 @@ type Case = {
   description: string
 }
 
+export const generateMetadata = async ({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) => ({ alternates: alternates((await params).locale) })
+
 const Home = () => {
   const t = useTranslations('home')
   const messages = useMessages()
@@ -22,19 +28,16 @@ const Home = () => {
   return (
     <main className="grow">
       <section className="container border-b pt-12 pb-12 md:pt-20 md:pb-20">
-        <motion.p
-          {...fadeUp(0)}
-          className="text-muted-foreground mb-8 font-mono text-sm"
-        >
+        <p className="animate-fade-up text-muted-foreground mb-8 font-mono text-sm">
           {`// ${t('role')}`}
-        </motion.p>
+        </p>
         <h1 className="text-[clamp(3.5rem,11vw,11rem)] leading-[0.86] font-bold tracking-tighter">
           <Words text={t('headline')} />
           <Words text={t('headlineAccent')} className="text-primary" />
         </h1>
-        <motion.div
-          {...fadeUp(0.6)}
-          className="mt-12 grid gap-8 border-t pt-8 md:mt-16 md:grid-cols-[minmax(0,1fr)_auto] md:items-end"
+        <div
+          style={{ animationDelay: '0.6s' }}
+          className="animate-fade-up mt-12 grid gap-8 border-t pt-8 md:mt-16 md:grid-cols-[minmax(0,1fr)_auto] md:items-end"
         >
           <p className="max-w-xl text-xl leading-normal text-neutral-300">
             {t('description')}
@@ -56,7 +59,7 @@ const Home = () => {
               {t('cta.contact')}
             </ContactDrawer>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <section className="bg-primary text-primary-foreground overflow-hidden py-4 font-mono whitespace-nowrap">
